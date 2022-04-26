@@ -10,11 +10,12 @@
 ---------------------------------------------------------------------------------------------------------------------
 
 # Ce code a été entierment réalisé par les membres du groupe 2.
-# elle est aussi commentée et documentée à 100% pour faciliter la correction.
+# Elle est aussi commentée à 100% pour faciliter la correction.
+# Merci et bonne réception
 
 ---------------------------------------------------------------------------------------------------------------------
 
-# EXPLICATION DU CODE
+# EXPLICATION DU CODE :
 
     -   # Ceci est un jeu démineur en java.
     -   # Le but est de découvrir les cases adjacentes à une case découverte.
