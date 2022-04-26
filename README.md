@@ -15,13 +15,14 @@
 
 ---------------------------------------------------------------------------------------------------------------------
 
-# EXPLICATION DU CODE :
+# EXPLICATION DU JEU :
 
-    -   # Ceci est un jeu démineur en java.
-    -   # Le but est de découvrir les cases adjacentes à une case découverte.
-    -   # Le jeu est généré aléatoirement.
-    -   # Le jeu est généré avec une grille en fonction de la difficulté choisie.
-    -	# Par défaut le jeu prendra comme nbLigne = 9, nbColonnes = 9 et mines = 10
+    # Ceci est un jeu démineur en java.
+    # Le but est de découvrir les cases sans tomber sur une bombe.
+    # On peut découvrir les cases adjacentes à une case vide cliquée.
+    # Le jeu est généré avec une grille en fonction du type de difficulté choisie.
+    # Toute bombe touchée conduira à échec immédiat du jeu.
+    # Bonne Chance
 
 ---------------------------------------------------------------------------------------------------------------------
 
