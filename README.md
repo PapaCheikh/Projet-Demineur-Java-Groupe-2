@@ -1,6 +1,6 @@
 # Projet-Demineur-Java-Groupe-2
 
---------------PROJET JAVA GROUPE 2-------------
+---------------------------------------------------------------------------------------------------------------------
 
 # MEMBRES DU GROUPE :
     # PAPA CHEIKH GNINGUE M1GLSI
@@ -22,7 +22,6 @@
     -   # Le jeu est généré aléatoirement.
     -   # Le jeu est généré avec une grille en fonction de la difficulté choisie.
     -	# Par défaut le jeu prendra comme nbLigne = 9, nbColonnes = 9 et mines = 10
-
 
 ---------------------------------------------------------------------------------------------------------------------
 
