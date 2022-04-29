@@ -165,18 +165,11 @@ public class Demineur extends JFrame implements ActionListener, MouseListener {
         mines = new boolean[nbLignes * nbColonnes];
         //initialiser le tableau de cases
         cases = new int[nbLignes * nbColonnes];
-        //initialiser le tableau de cases
         estClique = new boolean[nbLignes * nbColonnes];
-        //initialiser le tableau de cases
         clickable = new boolean[nbLignes * nbColonnes];
-        //initialiser le tableau de cases
         buttons = new JButton[nbLignes * nbColonnes];
         //initialiser le tableau de cases
-        cases = new int[nbLignes * nbColonnes];
-        //initialiser le tableau de cases
         estClique = new boolean[nbLignes * nbColonnes];
-        //initialiser le tableau de cases
-        clickable = new boolean[nbLignes * nbColonnes];
         for (int x = 0; x < nbLignes; x++) {
             for (int y = 0; y < nbColonnes; y++) {
                 mines[(nbLignes * y) + x] = false;
