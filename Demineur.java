@@ -7,6 +7,7 @@ public class Demineur extends JFrame implements ActionListener, MouseListener {
     // Déclaration des variables
     int nbrColonnes, nbrLignes, numMine;
     int nbLignes = 9, nbColonnes = 9, numMines = 10;
+    //GridLayout : permet de placer des composants sur une grille
     GridLayout grille = new GridLayout(nbLignes, nbColonnes); // Création du layout de la grille
     boolean[] mines = new boolean[nbLignes * nbColonnes];   // Tableau de mines
     boolean[] clickable = new boolean[nbLignes * nbColonnes];   // Tableau de cliquables
@@ -18,7 +19,9 @@ public class Demineur extends JFrame implements ActionListener, MouseListener {
     JMenuItem nouvellePartie = new JMenuItem("Nouveu Jeu"); // Nouvelle partie
     JMenuItem difficulte = new JMenuItem("OPTIONS");    // Difficulté
     JLabel renseignementDesMines = new JLabel("MINES: " + numMines + " MARQUÉ(S): 0");  // Renseignement des mines
-    JPanel p = new JPanel();    // Panel principal
+    //JPanel : c'est un container qui permet de regrouper des composants graphiques dans un espace qui s'adapte à son contenu.
+    // Panel principal
+    JPanel p = new JPanel();
  
     // Constructeur
     public Demineur() {
@@ -28,20 +31,20 @@ public class Demineur extends JFrame implements ActionListener, MouseListener {
         for (int i = 0; i < (nbLignes * nbColonnes); i++) {
             p.add(buttons[i]);
         }
-        // Création du menu
+        //JMenuBar def : c'est la barre de menu
         JMenuBar mb = new JMenuBar();
         JMenu m = new JMenu("PROJET DEMINEUR EN JAVA DU GROUPE 2");
-        nouvellePartie.addActionListener(this); // Action listener
-        m.add(nouvellePartie);  // Ajout du menu
-        difficulte.addActionListener(this); // Action listener
+        nouvellePartie.addActionListener(this); // ActionListener pour le bouton nouvelle partie 
+        m.add(nouvellePartie);   // Ajout de l'item "Nouveau Jeu" dans le menu "Projet Demineur"
+        difficulte.addActionListener(this); // Ajout d'un listener sur le menu nouvelle partie
         m.add(difficulte);  // Ajout du menu
         mb.add(m);  
         this.setJMenuBar(mb);   
-        this.add(p);
-        this.add(renseignementDesMines, BorderLayout.SOUTH);    // Ajout du label
-        this.pack();
+        this.add(p); //c'est ici que l'on ajoute le panel
+        this.add(renseignementDesMines, BorderLayout.SOUTH);     //c'est le bas de la fenetre
+        this.pack(); //c'est pour que le programme s'adapte à la taille de la fenêtre
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    // Fermeture de la fenêtre
-        this.setVisible(true);  // Affichage de la fenêtre
+        this.setVisible(true);  // Visibilité de la fenêtre
     }
  
     // Méthode pour générer les mines
