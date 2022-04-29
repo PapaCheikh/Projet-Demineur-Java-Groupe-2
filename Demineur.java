@@ -5,11 +5,8 @@ import javax.swing.*;
 public class Demineur extends JFrame implements ActionListener, MouseListener {
  
     // Déclaration des variables
-    int nbrColonnes = 0;
-    int nbrLignes = 0;
-    int nbLignes = 9;
-    int nbColonnes = 9;
-    int numMines = 10;
+    int nbrColonnes, nbrLignes, numMine;
+    int nbLignes = 9, nbColonnes = 9, numMines = 10;
     GridLayout grille = new GridLayout(nbLignes, nbColonnes); // Création du layout de la grille
     boolean[] mines = new boolean[nbLignes * nbColonnes];   // Tableau de mines
     boolean[] clickable = new boolean[nbLignes * nbColonnes];   // Tableau de cliquables
@@ -133,15 +130,15 @@ public class Demineur extends JFrame implements ActionListener, MouseListener {
         if (choix == 0) {
             nbrLignes = 5;
             nbrColonnes = 5;
-            numMines = 3;
+            numMine = 3;
         } else if (choix == 1) {
             nbrLignes = 9;
             nbrColonnes = 9;
-            numMines = 10;
+            numMine = 10;
         } else if (choix == 2) {
             nbrLignes = 15;
             nbrColonnes = 15;
-            numMines = 16;
+            numMine = 16;
         }
     }
  
@@ -149,9 +146,10 @@ public class Demineur extends JFrame implements ActionListener, MouseListener {
     public void commencer() {
         //appeler la methode difficulte
         difficulte();
-        //initialiser les lignes et colonnes
+        //initialiser les lignes et colonnes et mines
         nbLignes = nbrLignes;
         nbColonnes = nbrColonnes;
+        numMines = numMine;
         //initialiser le tableau de mines
         mines = new boolean[nbLignes * nbColonnes];
         //initialiser le tableau de cases
@@ -413,5 +411,9 @@ public class Demineur extends JFrame implements ActionListener, MouseListener {
                 JOptionPane.ERROR_MESSAGE); // On affiche un message de défaite
             reprendre();    // On réinitialise la partie
         }
+    }
+
+    public static void main(String[] args) {
+        new Demineur();
     }
 }
